@@ -123,7 +123,7 @@ groupedRatings = GROUP ratings BY movieID;
 averageRatings = FOREACH groupedRatings GENERATE group AS movieID,
         AVG(ratings.rating) AS avgRating, COUNT (ratings.rating) AS numRatings;
 
-badMovies = Filter averageRatings BY avgRating > 2.0;
+badMovies = Filter averageRatings BY avgRating < 2.0;
 
 namedBadMovies = JOIN badMovies BY movieID, nameLookup BY movieID;
 
@@ -133,6 +133,3 @@ finalResults = FOREACH namedBadMovies GENERATE nameLookup::movieTitle AS movieNa
 finalResultsSorted = ORDER finalResults BY numRatings DESC;
 
 DUMP finalResultsSorted;
-
-    
-
