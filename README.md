@@ -1,6 +1,31 @@
 # pigL
 pigLatin
 
+---------------------------COMMANDS --------------------------------------------
+LOAD STORE DUMP
+ - STORE ratings INTO 'outRatings' USING PigStoratge(':');
+ 
+FILTER DISTINCT FOREACH/GENERATE  MAPREDUCE STREAM SAMPLE
+JOIN COGROUP GROUP CROSS CUBE
+ORDER RANK LIMIT
+UNION SPLIT 
+
+DESCRIBE  EXPLAIN  ILLUSTRATE
+
+UDF's
+
+REGISTER DEFINE IMPORT
+
+FUNCTIONS AND LOADERS
+
+PigStorage
+TEXTLoader
+JsonLoader
+AvroStorage
+PrquetLoader
+OrcStorage
+HBaseStorage
+
 ---------------Realtion named "ratings" with a given schema-----------------------
 
 
